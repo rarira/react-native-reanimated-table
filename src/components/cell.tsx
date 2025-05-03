@@ -1,9 +1,8 @@
 import type { FC, PropsWithChildren } from 'react';
 import React, { useMemo } from 'react';
 import type { ViewStyle, TextStyle, StyleProp, ViewProps } from 'react-native';
-import { View } from 'react-native';
+import { View, TouchableWithoutFeedback } from 'react-native';
 import { Text, StyleSheet } from 'react-native';
-import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 
 interface CellProps {
   data?: any;
@@ -72,7 +71,7 @@ export const Cell: FC<PropsWithChildren<CellProps>> = ({
       ])}
     >
       <TouchableWithoutFeedback
-        containerStyle={[styles.cell, style]}
+        style={[styles.cell, style]}
         onPress={() => onPress?.(data)}
       >
         {textDom}

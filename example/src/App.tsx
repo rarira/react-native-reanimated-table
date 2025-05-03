@@ -1,11 +1,7 @@
 import * as React from 'react';
 
-import { View, StyleSheet, SafeAreaView } from 'react-native';
+import { View, StyleSheet, SafeAreaView, ScrollView } from 'react-native';
 import { Row, Table } from 'react-native-reanimated-table';
-import {
-  GestureHandlerRootView,
-  ScrollView,
-} from 'react-native-gesture-handler';
 
 const state = {
   tableHead: [
@@ -71,9 +67,9 @@ function App() {
 
 export default function Root() {
   return (
-    <GestureHandlerRootView style={styles.gestureHandlerRootView}>
+    <View style={styles.gestureHandlerRootView}>
       <App />
-    </GestureHandlerRootView>
+    </View>
   );
 }
 
